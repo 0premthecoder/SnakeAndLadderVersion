@@ -59,7 +59,7 @@ function checkladdersandsnakes() {
 
     for (let i = 0; i < tos.length; i++) {
         if (marginLeft() == froms[i][0] && marginTop() == froms[i][1]) {
-            new Audio('/media/win.mp3').play()
+            new Audio('/SnakeAndLadderVersion/media/win.mp3').play()
             document.querySelector(`#${turn}`).style.marginLeft = `${tos[i][0]}vmin`
             document.querySelector(`#${turn}`).style.marginTop = `${tos[i][1]}vmin`
         }
@@ -68,7 +68,7 @@ function checkladdersandsnakes() {
 }
 function move(direction) {
     return new Promise(async (resolve, reject) => {
-        new Audio('/media/move.mp3').play()
+        new Audio('/SnakeAndLadderVersion/media/move.mp3').play()
         if (direction == 'up') {
             document.querySelector(`#${turn}`).style.marginTop = String(marginTop() - 9.8) + 'vmin'
         }
