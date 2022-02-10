@@ -7,8 +7,8 @@ let button = document.getElementById('btn')
 button.addEventListener('click', async (e) => {
     if (!stopEvent) {
         stopEvent = true
-        // let dicenum = await roll()
-        let dicenum = 99
+        let dicenum = await roll()
+//         let dicenum = 99
         let isoutofrange = checkRange(dicenum)
         console.log(dicenum)
         await new Promise(resolve => setTimeout(resolve, 400))
